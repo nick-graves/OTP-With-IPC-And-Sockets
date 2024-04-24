@@ -1,4 +1,5 @@
 One-Time Pad Encryption and Decryption System
+
 Introduction
 This repository contains a set of C programs designed to implement a one-time pad-like encryption and decryption system using socket-based inter-process communication (IPC). The system includes servers (enc_server for encryption and dec_server for decryption) and corresponding clients (enc_client for encryption and dec_client for decryption). Additionally, a keygen utility is provided to generate random key files of specified lengths.
 
