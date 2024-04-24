@@ -42,20 +42,23 @@ gcc -o enc_client enc_client.c
 gcc -o dec_server dec_server.c
 gcc -o dec_client dec_client.c
 gcc -o keygen keygen.c
-
+```
 ### Running Programs
 
 Start `enc_server` and `dec_server` in the background on different ports:
 
 ```bash
+#!/bin/bash
 $ ./enc_server 57171 &
 $ ./dec_server 57172 &
+```
 Use enc_client and dec_client to encrypt and decrypt text:
 
-bash
-Copy code
+```bash
+#!/bin/bash
 $ enc_client plaintext.txt key.txt 57171 > ciphertext.txt
 $ dec_client ciphertext.txt key.txt 57172 > decrypted.txt
+```
 Ensure to replace plaintext.txt and key.txt with your actual input filenames, and the port numbers (57171, 57172) should match the ports where your enc_server and dec_server are listening respectively.
 
 ### Notes
